@@ -1,6 +1,6 @@
 name: roobo_base
-description: A new Flutter project.
-version: 0.0.1
+description: roobo基础组件库 提供开发中各种基础组件 详见api
+version: 1.0.0
 author:
 homepage:
 
@@ -19,13 +19,19 @@ dependencies:
   flutter_easyloading: ^3.0.0 #toast loading库
 
   roobo_net:
-    path: ../roobo_net
+    git:
+      url: git@git.365jiating.com:app_base_project/roobo_net.git
+      ref: 1.0.0
 
   roobo_theme:
-    path: ../roobo_theme
+    git:
+      url: git@git.365jiating.com:app_base_project/roobo_theme.git
+      ref: 1.0.0
 
   roobo_logger:
-    path: ../roobo_logger
+    git:
+      url: git@git.365jiating.com:app_base_project/roobo_logger.git
+      ref: 1.0.0
 
 
 dev_dependencies:

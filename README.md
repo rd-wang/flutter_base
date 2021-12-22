@@ -108,17 +108,6 @@ class ResultData {
 
 ```
 
-## toast
-
-1.调用
-
-```text
-  ToastUtil.showToast("xxxxx",type: ToastType.Error);
-```
-
-```text
-  ToastType { Success, Info, Error, Toast, Loading, Progress }
-```
 
 ## preference
 

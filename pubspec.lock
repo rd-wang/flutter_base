@@ -119,7 +119,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_easyloading:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: flutter_easyloading
       url: "https://pub.flutter-io.cn"
@@ -272,6 +272,15 @@ packages:
       ref: "1.0.0"
       resolved-ref: "37549d56da608848db435d3cf17dfdff755b630b"
       url: "git@git.365jiating.com:app_base_project/roobo_theme.git"
+    source: git
+    version: "1.0.0"
+  roobo_toast:
+    dependency: "direct main"
+    description:
+      path: "."
+      ref: "1.0.0"
+      resolved-ref: "4bbd249c8be3a3eb8e0a3fd2663adef6763a9eb0"
+      url: "git@git.365jiating.com:app_base_project/roobo_toast.git"
     source: git
     version: "1.0.0"
   shared_preferences:

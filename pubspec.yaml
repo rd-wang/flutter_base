@@ -35,7 +35,7 @@ dependencies:
   roobo_toast:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_toast.git
-      ref: 1.1.0
+      ref: 1.0.0
 
 
 dev_dependencies:

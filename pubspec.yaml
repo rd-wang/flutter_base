@@ -1,6 +1,6 @@
 name: roobo_base
 description: roobo基础组件库 提供开发中各种基础组件 详见api
-version: 1.0.0
+version: 1.1.1
 author:
 homepage:
 
@@ -16,6 +16,7 @@ dependencies:
   shared_preferences: ^2.0.5
   package_info: ^2.0.0
   provider: ^5.0.0    #跨组件状态共享
+  flutter_easyloading: ^3.0.0 #toast loading库
 
   roobo_net:
     git:
@@ -32,10 +33,6 @@ dependencies:
       url: git@git.365jiating.com:app_base_project/roobo_logger.git
       ref: 1.0.0
 
-  roobo_toast:
-    git:
-      url: git@git.365jiating.com:app_base_project/roobo_toast.git
-      ref: 1.1.0
 
 
 dev_dependencies:

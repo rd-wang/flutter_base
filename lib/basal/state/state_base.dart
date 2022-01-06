@@ -55,28 +55,30 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
 
   @override
   Widget build(BuildContext context) {
-    return Theme(
-      data: themeData,
-      child: StreamBuilder(
-          stream: _streamController.stream,
-          builder: (context, snapshot) {
-            if (snapshot.connectionState == ConnectionState.waiting) {
-              return buildProgressWidget(context);
-            }
-            Widget body = _getBodyWidget(snapshot, context);
-            if (isUseSystemAppbar()) {
-              return Scaffold(
-                appBar: AppBar(
-                  title: getAppBarText(),
-                  leading: getDefaultAppbarLeading(),
-                  actions: getAction(),
-                ),
-                body: body,
-              );
-            } else {
-              return body;
-            }
-          }),
+    return Material(
+      child: Theme(
+        data: themeData,
+        child: StreamBuilder(
+            stream: _streamController.stream,
+            builder: (context, snapshot) {
+              if (snapshot.connectionState == ConnectionState.waiting) {
+                return buildProgressWidget(context);
+              }
+              Widget body = _getBodyWidget(snapshot, context);
+              if (isUseSystemAppbar()) {
+                return Scaffold(
+                  appBar: AppBar(
+                    title: getAppBarText(),
+                    leading: getDefaultAppbarLeading(),
+                    actions: getAction(),
+                  ),
+                  body: body,
+                );
+              } else {
+                return body;
+              }
+            }),
+      ),
     );
   }
 

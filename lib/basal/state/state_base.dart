@@ -56,6 +56,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   @override
   Widget build(BuildContext context) {
     return Material(
+      type: MaterialType.transparency,
       child: Theme(
         data: themeData,
         child: StreamBuilder(

@@ -10,7 +10,7 @@ class EmptyDataWidget extends StatelessWidget {
   final Color color;
 
   EmptyDataWidget({
-    Key key,
+    Key? key,
     this.imageString = "res/img/bg_no_course_icon.png",
     this.tips = '暂无数据',
     this.height = 0,

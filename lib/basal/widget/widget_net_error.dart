@@ -23,7 +23,7 @@ class NetErrorWidget extends StatelessWidget {
               onPressed: () {
                 f();
               },
-              color: ThemeConfig.currentThemeData.primaryColor,
+              color: ThemeConfig.currentThemeData!.primaryColor,
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Text("重新加载", style: ThemeConfig.getCurrentPrimaryButtonTextStyle(context)),

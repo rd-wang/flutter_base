@@ -9,16 +9,16 @@ import 'package:roobo_base/context/roobo_context.dart';
 import 'package:roobo_theme/config_theme.dart';
 
 abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
-  StreamController _streamController;
-  ThemeData themeData;
-  bool hasAppbar;
-  Text appbarText;
-  Widget appbarLeading;
-  List<Widget> appbarActions;
+  StreamController? _streamController;
+  ThemeData? themeData;
+  bool? hasAppbar;
+  Text? appbarText;
+  Widget? appbarLeading;
+  List<Widget>? appbarActions;
 
-  getData(StreamController _streamController);
+  getData(StreamController? _streamController);
 
-  getResumeData(StreamController _streamController) {}
+  getResumeData(StreamController? _streamController) {}
 
   @override
   void initState() {
@@ -29,7 +29,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
 
   @override
   void dispose() {
-    _streamController.close();
+    _streamController!.close();
     super.dispose();
   }
 
@@ -38,7 +38,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
     RooboContext.context = context;
     themeData = getThemeData();
     if (themeData == null) {
-      themeData = ThemeConfig.themeList[0];
+      themeData = ThemeConfig.themeList![0];
     }
     super.didChangeDependencies();
   }
@@ -50,7 +50,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   }
 
   sendEmptySucceed() {
-    _streamController.sink.add("no_net_succeed");
+    _streamController!.sink.add("no_net_succeed");
   }
 
   @override
@@ -58,9 +58,9 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
     return Material(
       type: MaterialType.transparency,
       child: Theme(
-        data: themeData,
+        data: themeData!,
         child: StreamBuilder(
-            stream: _streamController.stream,
+            stream: _streamController!.stream,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return buildProgressWidget(context);
@@ -97,7 +97,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
     return EmptyDataWidget();
   }
 
-  Widget buildChild(BuildContext context, dynamic data, StreamController _streamController);
+  Widget buildChild(BuildContext context, dynamic data, StreamController? _streamController);
 
   _getBodyWidget(AsyncSnapshot<dynamic> snapshot, BuildContext context) {
     if (snapshot.hasError) {
@@ -116,7 +116,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
     return true;
   }
 
-  Text getAppBarText() {
+  Text? getAppBarText() {
     return null;
   }
 

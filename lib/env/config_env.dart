@@ -15,10 +15,10 @@ class EnvConfig {
   static bool isLog = true;
 
   // 这个参数由服务端分配；同一个项目的android/ios使用同一个app_package_id
-  static String appPackageID;
+  static String? appPackageID;
 
   // 这个参数由服务端分配；机构的唯一标识
-  static String appID;
+  static String? appID;
 
   // 平台信息
   static String platform = Platform.operatingSystem;

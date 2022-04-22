@@ -7,31 +7,31 @@ homepage:
 publish_to: none
 
 environment:
-  sdk: ">=2.7.0 <3.0.0"
+  sdk: '>=2.12.0 <3.0.0'
   flutter: ">=1.17.0"
 
 dependencies:
   flutter:
     sdk: flutter
-  shared_preferences: ^2.0.5
-  package_info: ^2.0.0
-  provider: ^5.0.0    #跨组件状态共享
-  flutter_easyloading: ^3.0.0 #toast loading库
+  shared_preferences: ^2.0.13
+  package_info: ^2.0.2
+  provider: ^6.0.2    #跨组件状态共享
+  flutter_easyloading: ^3.0.3 #toast loading库
 
   roobo_net:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_net.git
-      ref: 1.2.0
+      ref: 2.0.0
 
   roobo_theme:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_theme.git
-      ref: 1.0.0
+      ref: 2.0.0
 
   roobo_logger:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_logger.git
-      ref: 1.0.0
+      ref: 2.0.0
 
 
 

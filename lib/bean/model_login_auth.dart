@@ -5,10 +5,10 @@ import 'package:roobo_base/preference/preference.dart';
 ///修改此处时需要保证auth的内存和缓存的一致性
 ///修改要同时修改，不能单一修改
 class LoginAuthModel extends ChangeNotifier{
-  LoginAuth _loginAuth;
+  LoginAuth? _loginAuth;
 
   LoginAuthModel() {
-    String authJson = Preference.getString("auth");
+    String? authJson = Preference.getString("auth");
     if (authJson == null) {
       return;
     }
@@ -18,7 +18,7 @@ class LoginAuthModel extends ChangeNotifier{
   set auth(LoginAuth auth) {
     if (auth == null || auth.appUserID == null) return;
     _loginAuth = auth;
-    Preference.setString("auth", jsonEncode(_loginAuth.toJson()));
+    Preference.setString("auth", jsonEncode(_loginAuth!.toJson()));
     notifyListeners();
   }
 
@@ -38,11 +38,11 @@ class LoginAuthModel extends ChangeNotifier{
 
 // 登陆认证info
 class LoginAuth {
-  String appUserID;
-  String accessToken;
-  String accessTokenExpires;
-  String refreshToken;
-  String refreshTokenExpires;
+  String? appUserID;
+  String? accessToken;
+  String? accessTokenExpires;
+  String? refreshToken;
+  String? refreshTokenExpires;
 
   LoginAuth(
       {this.appUserID,

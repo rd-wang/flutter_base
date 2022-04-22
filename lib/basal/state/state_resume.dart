@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 
 class Resume {
   dynamic data;
-  String source;
+  String? source;
 }
 
 abstract class ResumableState<T extends StatefulWidget> extends State<T> with WidgetsBindingObserver {
@@ -22,7 +22,7 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
   }
 
   /// 代替Navigator.push(),
-  Future<T> push<T extends Object>(BuildContext context, Route<T> route, [String source]) {
+  Future<T> push<T extends Object>(BuildContext context, Route<T> route, [String? source]) {
     _isPaused = true;
     onPause();
 
@@ -33,20 +33,20 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
       resumeData.source = source;
 
       onResume();
-      return value;
+      return value!;
     });
   }
 
   /// 代替showDialog,
   Future<T> showLifecycleDialog<T>({
-    @required BuildContext context,
-    WidgetBuilder builder,
+    required BuildContext context,
+    WidgetBuilder? builder,
     bool barrierDismissible = true,
-    Color barrierColor,
+    Color? barrierColor,
     bool useSafeArea = true,
     bool useRootNavigator = true,
-    RouteSettings routeSettings,
-    @Deprecated('child-is useless please use builder') Widget child,
+    RouteSettings? routeSettings,
+    @Deprecated('child-is useless please use builder') Widget? child,
   }) {
     _isPaused = true;
     onPause();
@@ -59,7 +59,7 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
       useRootNavigator: useRootNavigator,
       routeSettings: routeSettings,
       builder: (BuildContext context) {
-        return child;
+        return child!;
       },
     ).then((value) {
       _isPaused = false;
@@ -70,7 +70,7 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
   }
 
   /// 代替Navigator.pushNamed()
-  Future<T> pushNamed<T extends Object>(BuildContext context, String routeName, {Object arguments}) {
+  Future<T> pushNamed<T extends Object>(BuildContext context, String routeName, {Object? arguments}) {
     _isPaused = true;
     onPause();
 
@@ -81,7 +81,7 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
       resumeData.source = routeName;
 
       onResume();
-      return value;
+      return value!;
     });
   }
 
@@ -89,13 +89,13 @@ abstract class ResumableState<T extends StatefulWidget> extends State<T> with Wi
   void initState() {
     super.initState();
     resumeHasCall = true;
-    WidgetsBinding.instance.addObserver(this);
-    WidgetsBinding.instance.addPostFrameCallback((_) => onReady());
+    WidgetsBinding.instance!.addObserver(this);
+    WidgetsBinding.instance!.addPostFrameCallback((_) => onReady());
   }
 
   @override
   void dispose() {
-    WidgetsBinding.instance.removeObserver(this);
+    WidgetsBinding.instance!.removeObserver(this);
     super.dispose();
   }
 

@@ -26,7 +26,7 @@ class RooboBase {
     bool isLog, {
     Map<String, String> errorMsg = const {},
     Map<String, Function> errorHandle = const {},
-    Function(ConnectivityResult result) listener,
+    required Function(ConnectivityResult result) listener,
   }) async {
     Logger.i("NetState.init");
     await NetState.init(listener);

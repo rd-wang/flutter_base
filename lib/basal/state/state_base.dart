@@ -9,16 +9,16 @@ import 'package:roobo_base/context/roobo_context.dart';
 import 'package:roobo_theme/config_theme.dart';
 
 abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
-  StreamController? _streamController;
+  late StreamController _streamController;
   ThemeData? themeData;
   bool? hasAppbar;
   Text? appbarText;
   Widget? appbarLeading;
   List<Widget>? appbarActions;
 
-  getData(StreamController? _streamController);
+  getData(StreamController _streamController);
 
-  getResumeData(StreamController? _streamController) {}
+  getResumeData(StreamController _streamController) {}
 
   @override
   void initState() {
@@ -29,7 +29,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
 
   @override
   void dispose() {
-    _streamController!.close();
+    _streamController.close();
     super.dispose();
   }
 
@@ -50,7 +50,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   }
 
   sendEmptySucceed() {
-    _streamController!.sink.add("no_net_succeed");
+    _streamController.sink.add("no_net_succeed");
   }
 
   @override
@@ -60,7 +60,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
       child: Theme(
         data: themeData!,
         child: StreamBuilder(
-            stream: _streamController!.stream,
+            stream: _streamController.stream,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 return buildProgressWidget(context);
@@ -110,7 +110,9 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   }
 
   /// if return null will use the ThemeConfig.themeList[0];
-  ThemeData getThemeData();
+  ThemeData? getThemeData() {
+    return null;
+  }
 
   bool isUseSystemAppbar() {
     return true;

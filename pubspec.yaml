@@ -1,6 +1,6 @@
 name: roobo_base
 description: roobo基础组件库 提供开发中各种基础组件 详见api
-version: 2.0.2
+version: 2.0.4
 author:
 homepage:
 
@@ -46,9 +46,8 @@ dev_dependencies:
 flutter:
 
 # To add assets to your package, add an assets section, like this:
-# assets:
-#   - images/a_dot_burr.jpeg
-#   - images/a_dot_ham.jpeg
+ assets:
+   - res/img/
 #
 # For details regarding assets in packages, see
 # https://flutter.dev/assets-and-images/#from-packages

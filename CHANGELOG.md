@@ -18,5 +18,7 @@
 
 ## [2.0.3] - 添加 icon_back
 
+## [2.0.4] - 添加 assets
+
 
 * TODO: Describe initial release.

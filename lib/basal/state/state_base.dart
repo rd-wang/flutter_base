@@ -134,6 +134,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
         child: Container(
           child: Image.asset(
             "res/img/icon_back.png",
+            package: 'roobo_base',
             width: 9,
             height: 16,
           ),

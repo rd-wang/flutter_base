@@ -12,7 +12,11 @@
 
 ## [2.0.0] - null-safe
 
+## [2.0.1] - getThemeData（）改为非必须实现的方法
 
+## [2.0.2] - 移除 loginAuth
+
+## [2.0.3] - 添加 icon_back
 
 
 * TODO: Describe initial release.

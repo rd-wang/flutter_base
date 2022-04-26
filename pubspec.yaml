@@ -1,6 +1,6 @@
 name: roobo_base
 description: roobo基础组件库 提供开发中各种基础组件 详见api
-version: 2.0.4
+version: 2.0.5
 author:
 homepage:
 
@@ -26,7 +26,7 @@ dependencies:
   roobo_theme:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_theme.git
-      ref: 2.0.0
+      ref: 2.0.1
 
   roobo_logger:
     git:

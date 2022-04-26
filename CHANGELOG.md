@@ -20,5 +20,7 @@
 
 ## [2.0.4] - 添加 assets
 
+## [2.0.5] - 修改themeconfig
+
 
 * TODO: Describe initial release.

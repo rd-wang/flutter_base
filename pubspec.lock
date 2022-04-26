@@ -276,11 +276,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "2.0.0"
-      resolved-ref: b2210d542d832a8ebb110ce11295254faa8f2eeb
+      ref: "2.0.1"
+      resolved-ref: "001c91cfd72338f705fc72d6b5c08fae8897c5ad"
       url: "git@git.365jiating.com:app_base_project/roobo_theme.git"
     source: git
-    version: "2.0.0"
+    version: "2.0.1"
   shared_preferences:
     dependency: "direct main"
     description:

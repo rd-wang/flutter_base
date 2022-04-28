@@ -12,7 +12,6 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   late StreamController _streamController;
   ThemeData? themeData;
   bool? hasAppbar;
-  Text? appbarText;
   Widget? appbarLeading;
   List<Widget>? appbarActions;
 
@@ -118,7 +117,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
     return true;
   }
 
-  Text? getAppBarText() {
+  Widget? getAppBarText() {
     return null;
   }
 

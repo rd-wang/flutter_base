@@ -22,5 +22,5 @@
 
 ## [2.0.5] - 修改themeconfig
 
+## [2.0.6] -  Text? getAppBarText() {} 变更为   Widget? getAppBarText() {}
 
-* TODO: Describe initial release.

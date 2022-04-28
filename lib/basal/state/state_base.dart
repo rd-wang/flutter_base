@@ -62,7 +62,9 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
             stream: _streamController.stream,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return buildProgressWidget(context);
+                return Material(
+                  child: buildProgressWidget(context),
+                );
               }
               Widget body = _getBodyWidget(snapshot, context);
               if (isUseSystemAppbar()) {

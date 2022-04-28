@@ -24,3 +24,5 @@
 
 ## [2.0.6] -  Text? getAppBarText() {} 变更为   Widget? getAppBarText() {}
 
+## [2.0.7] -  处理空页面背景色为黑色
+

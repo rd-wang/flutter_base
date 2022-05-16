@@ -28,3 +28,6 @@
 
 ## [2.0.8] -  修复Resumeable，NullSafe支持时数据类型异常转换的问题
 
+## [2.0.9] -  添加新的error的style
+
+

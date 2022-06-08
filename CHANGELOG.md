@@ -31,3 +31,5 @@
 ## [2.0.9] -  添加新的error的style
 
 ## [2.1.0] -  支持flutter 3
+
+## [2.1.1] -  更新logger 支持摇晃查看logger的输出

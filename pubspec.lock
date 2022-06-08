@@ -258,8 +258,8 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "2.0.0"
-      resolved-ref: acf481717385a6f4dacdc53d2f303b03dc6a0b2c
+      ref: "2.1.0"
+      resolved-ref: "0c0676c9412d02f1054a9a02c5088b7cb54b3c24"
       url: "git@git.365jiating.com:app_base_project/roobo_logger.git"
     source: git
     version: "2.0.0"
@@ -281,6 +281,13 @@ packages:
       url: "git@git.365jiating.com:app_base_project/roobo_theme.git"
     source: git
     version: "2.0.1"
+  sensors:
+    dependency: transitive
+    description:
+      name: sensors
+      url: "https://pub.flutter-io.cn"
+    source: hosted
+    version: "2.0.3"
   shared_preferences:
     dependency: "direct main"
     description:

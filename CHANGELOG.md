@@ -33,3 +33,6 @@
 ## [2.1.0] -  支持flutter 3
 
 ## [2.1.1] -  更新logger 支持摇晃查看logger的输出
+
+## [2.2.0] -  重构error的style的设置方式 在init时 支持empty，no_net 的自定义
+

@@ -6,6 +6,7 @@ import 'package:roobo_base/basal/widget/widget_empty_data.dart';
 import 'package:roobo_base/basal/widget/widget_net_error.dart';
 import 'package:roobo_base/basal/widget/widget_process_load.dart';
 import 'package:roobo_base/context/roobo_context.dart';
+import 'package:roobo_base/roobo_base.dart';
 import 'package:roobo_theme/config_theme.dart';
 
 abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
@@ -89,13 +90,23 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
   }
 
   buildErrorWidget(BuildContext context) {
-    return NetErrorWidget(() {
-      getData(_streamController);
-    });
+    if (RooboBase.netErrorWidget != null) {
+      return RooboBase.netErrorWidget!(() {
+        getData(_streamController);
+      });
+    } else {
+      return NetErrorWidget(() {
+        getData(_streamController);
+      });
+    }
   }
 
   buildEmptyWidget(BuildContext context) {
-    return EmptyDataWidget();
+    if (RooboBase.emptyWidget != null) {
+      return RooboBase.emptyWidget;
+    } else {
+      return EmptyDataWidget();
+    }
   }
 
   Widget buildChild(BuildContext context, dynamic data, StreamController? _streamController);

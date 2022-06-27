@@ -36,3 +36,5 @@
 
 ## [2.2.0] -  重构error的style的设置方式 在init时 支持empty，no_net 的自定义
 
+## [2.2.1] -  网络超时添加对send和receive的归类Timeout
+

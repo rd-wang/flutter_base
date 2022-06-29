@@ -44,5 +44,7 @@
 
 ## [2.3.2] -  Logger init 初始化交给base处理
 
-## [2.3.2] -  EnvConfig.print 调用位置调整
+## [2.3.3] -  EnvConfig.print 调用位置调整
+
+## [2.3.4] -  Logger.isWriteFile 修复不生效的问题
 

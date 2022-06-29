@@ -286,11 +286,11 @@ packages:
     dependency: "direct main"
     description:
       path: "."
-      ref: "3.0.0"
-      resolved-ref: "31ad4f3151bcc27b41c1a60a1a02d9d865b512d5"
+      ref: "3.0.1"
+      resolved-ref: "1398219fdff4395dde00302df0990b77b7cea765"
       url: "git@git.365jiating.com:app_base_project/roobo_logger.git"
     source: git
-    version: "3.0.0"
+    version: "3.0.1"
   roobo_net:
     dependency: "direct main"
     description:

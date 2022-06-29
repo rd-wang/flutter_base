@@ -12,6 +12,8 @@ class EnvConfig {
   // 判断网络环境
   static bool isOnline = true;
 
+  static bool writeLog2Local = false;
+
   static bool isLog = true;
 
   // 这个参数由服务端分配；同一个项目的android/ios使用同一个app_package_id
@@ -90,6 +92,7 @@ class EnvConfig {
     appPackageID = ids['com.roobo.AppPackageId'];
     appID = ids['com.roobo.AppId'];
     isOnline = ids['env'] == "online";
+    writeLog2Local = ids['writeLog2Local'];
 
     PackageInfo packageInfo = await PackageInfo.fromPlatform();
     appName = packageInfo.appName;

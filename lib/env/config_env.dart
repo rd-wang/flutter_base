@@ -99,7 +99,6 @@ class EnvConfig {
     appPackageName = packageInfo.packageName;
     appMajorVersion = packageInfo.version;
     appMinorVersion = packageInfo.buildNumber;
-    if (isLog) printArg();
     return true;
   }
 

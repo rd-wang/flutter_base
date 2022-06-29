@@ -44,3 +44,5 @@
 
 ## [2.3.2] -  Logger init 初始化交给base处理
 
+## [2.3.2] -  EnvConfig.print 调用位置调整
+

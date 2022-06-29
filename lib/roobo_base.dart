@@ -27,6 +27,7 @@ class RooboBase {
     await Logger.init(isWriteFile: EnvConfig.writeLog2Local);
     Logger.i("Preference.init");
     Logger.i("EnvConfig.init");
+    if (EnvConfig.isLog) EnvConfig.printArg();
     Logger.i("Logger.init");
   }
 

@@ -48,3 +48,5 @@
 
 ## [2.3.4] -  Logger.isWriteFile 修复不生效的问题
 
+## [2.3.3] -  Logger.isWriteFile 修复不生效的问题
+

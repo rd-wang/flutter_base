@@ -29,7 +29,7 @@ dependencies:
   roobo_logger:
     git:
       url: git@git.365jiating.com:app_base_project/roobo_logger.git
-      ref: 3.0.0
+      ref: 3.0.1
 
 
 

@@ -46,3 +46,5 @@
 
 ## [2.3.2] -  EnvConfig.print 调用位置调整
 
+## [2.3.3] -  Logger.isWriteFile 修复不生效的问题
+

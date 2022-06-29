@@ -2,7 +2,6 @@ library roobo_base;
 
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:roobo_base/basal/widget/widget_net_error.dart';
 import 'package:roobo_base/preference/preference.dart';
 import 'package:roobo_logger/roobo_logger.dart';
 import 'package:roobo_net/net_state/net_state.dart';
@@ -23,10 +22,12 @@ class RooboBase {
   static Widget? get emptyWidget => _emptyWidget;
 
   static preInit() async {
-    Logger.i("Preference.init");
     await Preference.init();
-    Logger.i("EnvConfig.init");
     await EnvConfig.init();
+    await Logger.init(isWriteFile: EnvConfig.writeLog2Local);
+    Logger.i("Preference.init");
+    Logger.i("EnvConfig.init");
+    Logger.i("Logger.init");
   }
 
   static init(

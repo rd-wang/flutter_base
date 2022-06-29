@@ -42,3 +42,5 @@
 
 ## [2.3.1] -  logger支持writeLog2Local控制是否开启写入本地文件
 
+## [2.3.2] -  Logger init 初始化交给base处理
+

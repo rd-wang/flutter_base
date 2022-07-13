@@ -69,14 +69,7 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
               }
               Widget body = _getBodyWidget(snapshot, context);
               if (isUseSystemAppbar()) {
-                return Scaffold(
-                  appBar: AppBar(
-                    title: getAppBarText(),
-                    leading: getDefaultAppbarLeading(),
-                    actions: getAction(),
-                  ),
-                  body: body,
-                );
+                return getScaFFold(context, body);
               } else {
                 return body;
               }
@@ -128,6 +121,21 @@ abstract class BaseState<T extends StatefulWidget> extends ResumableState<T> {
 
   bool isUseSystemAppbar() {
     return true;
+  }
+
+  Widget getScaFFold(BuildContext context, Widget body) {
+    return Scaffold(
+      appBar: getAppBar(context),
+      body: body,
+    );
+  }
+
+  AppBar getAppBar(BuildContext context) {
+    return AppBar(
+      title: getAppBarText(),
+      leading: getDefaultAppbarLeading(),
+      actions: getAction(),
+    );
   }
 
   Widget? getAppBarText() {
